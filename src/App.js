@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { useState } from 'react';
+import Layout from './components/layout';
+import Tododata from './components/features/todolist/tododata';
+import Todoform from './components/features/todoform';
+var i = 0;
+const App = () => {
+  const dummydatas = [];
+  const [datas, setdatas] = useState(dummydatas);
 
-function App() {
+  const OnSaveDataHandler = (prevdata) => {
+    i = i + 1;
+    const data = {
+      ...prevdata,
+      id: i,
+    };
+    setdatas((prevDatas) => [data, ...prevDatas]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="form">
+      <Layout>
+        <Todoform OnSaveData={OnSaveDataHandler} />
+        <Tododata datas={datas} />
+      </Layout>
+    </section>
   );
-}
+};
 
 export default App;

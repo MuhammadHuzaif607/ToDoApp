@@ -1,0 +1,15 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.items ul {
+  display: flex;
+  gap: 20px;
+}
+.items ul li {
+  font-size: 19px;
+}
+.datas {
+  padding-top: 60px;
+}

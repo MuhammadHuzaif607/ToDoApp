@@ -1,0 +1,42 @@
+.main {
+  width: 500px;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+  padding: 30px 20px;
+  margin: 0 auto;
+}
+.form {
+  padding: 70px 0;
+}
+body {
+  font-family: monospace;
+}
+.main h1 {
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+.form-field input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #9d9d9d;
+}
+
+.form-field label {
+  display: block;
+  text-align: left;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.form-field button {
+  background: #000;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  padding: 7px 25px;
+}
