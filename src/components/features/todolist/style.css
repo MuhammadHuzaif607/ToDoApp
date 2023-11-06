@@ -3,13 +3,57 @@ ul {
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;
+}
 .items ul {
   display: flex;
   gap: 20px;
 }
+
 .items ul li {
   font-size: 19px;
 }
 .datas {
   padding-top: 60px;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  border: 1px solid #a9a5a5;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.btns {
+  display: flex;
+  gap: 10px;
+}
+.btns button:first-child {
+  font-size: 20px;
+  color: blue;
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+.btns button:nth-child(2) {
+  color: red;
+  font-size: 20px;
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+.items input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+}
+.items {
+  width: 30%;
+}
+.items input:focus {
+  outline: 0;
+}
+.items input::placeholder {
+  font-size: 15px;
 }

@@ -13,19 +13,25 @@ const Todoform = ({ OnSaveData }) => {
       ...prevState,
       [e.target.name]: e.target.value,
     }));
-    console.log(tododata.title);
+    console.log(e.target.name);
   };
   const OnSubmitHandler = (e) => {
     e.preventDefault();
 
-    OnSaveData(tododata);
+    const newId = id + 1; // Increment id here
+    OnSaveData({
+      id: newId, // Use the newId
+      ...tododata,
+    });
+
     console.log(tododata);
     settododata({
       title: '',
       date: '',
-      id,
+      id: newId, // Set id to the newId
     });
-    id += 1;
+
+    id = newId; // Update the id
   };
   return (
     <Fragment>
