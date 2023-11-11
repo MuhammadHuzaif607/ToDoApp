@@ -59,7 +59,7 @@ const Todoitem = (props) => {
   } else {
     return (
       <div className="list">
-        <div className="items">
+        <div className="items" key={props.id}>
           <ul>
             <li>Title:{props.title}</li>
             <li>Date{props.date}</li>

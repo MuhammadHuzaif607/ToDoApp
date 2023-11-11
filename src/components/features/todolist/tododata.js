@@ -7,6 +7,7 @@ const Tododata = ({ datas, deletedata, Onupdate }) => {
       {datas.map((el) => {
         return (
           <Todoitem
+            key={el.id}
             title={el.title}
             date={el.date}
             id={el.id}
